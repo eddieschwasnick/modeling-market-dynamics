@@ -38,7 +38,9 @@ I then compared both models to the real SPY prices to see which one tracked bett
 ---
 
 ## Visualizations
-Picture
+- `flat_model_vs_actual.png`: Flat model vs actual SPY  
+- `curved_model_vs_actual.png`: Curved model vs actual SPY  
+- `optimized_curved_model.png`: Best-performing curved model (on this particular simulation it was alpha = 1.0)
 
 ---
 
