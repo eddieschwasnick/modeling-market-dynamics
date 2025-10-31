@@ -18,12 +18,16 @@ What if the market doesn't move in straight lines? How can we test how outside f
 ---
 
 ## Summary
+Rather than trying to predict the exact price level of SPY, this project focuses on modeling the underlying price dynamics and structural behavior of the market. The goal was to replicate how prices move generally over time. Such as their volatility, drift, and curvature—under different modeling assumptions:
+
 I created two models to try to simulate how SPY moved in 2023:
 
 - **Flat Model:** regular Geometric Brownian Motion with constant drift and volitility
 - **Curved Model:** changes the drift each day based on how strong the previous daily returns are (using a 30 day rolling Sharpe ratio)
 
-I then compared both models to the real SPY prices to see which one tracked better (using a correlation coefficient)
+By comparing simulated trajectories to actual SPY data, the emphasis is on understanding the shape and structure of market motion, not on short-term price prediction accuracy.
+
+I compared both models to the real SPY prices to see which one tracked better (using a correlation coefficient)
 
 ---
 
@@ -47,23 +51,21 @@ Curved model vs actual SPY:
 ---
 
 ## Theoretical Background
+The project builds on stochastic process theory, treating price action as a function of both randomness and structured curvature
+- The Flat Model follows Geometric Brownian Motion (GBM), where prices evolve with constant drift (μ) and volatility (σ).
+- The Curved Model modifies the drift dynamically using a 30-day rolling Sharpe ratio, introducing path-dependence — meaning market “momentum” and “structure” influence future returns.
 
-
----
-
-## How to Run
-
----
-
-## Files
+This approach reflects the idea that markets move through curved spaces, where accumulated effects of past returns bend future trajectories. This is conceptually similar to holonomy in differential geometry, which is discuessed in the book "The Man Who Solved the Market", and is how I got the idea to do this project in the first place.
 
 ---
 
-## Next Steps
+## Conclusion and Next Steps
+This project demonstrates that even a simple adjustment to drift — allowing it to evolve with recent performance — can produce market simulations that more closely resemble real-world dynamics. While the goal was never to predict exact prices, the improved correlation of the curved model suggests that markets do exhibit structural tendencies that a flat Brownian framework can’t fully capture.
 
----
+The next step is to extend this framework by introducing stochastic volatility, allowing both drift and volatility to evolve together. This would make the model more realistic and open the door to testing how market “curvature” behaves under different macro or volatility regimes.
+
 
 ## Author
 Edward Peter Schwasnick
 Statistics + CS Minor | University of Vermont
-Quant Research Enthusiast
+Quantitative and Strategic Thinking
