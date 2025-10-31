@@ -30,9 +30,9 @@ I then compared both models to the real SPY prices to see which one tracked bett
 ## Key Results (Results may differ based on simulation)
 | Model                | Correlation with SPY | Improvement |
 |----------------------|----------------------|-------------|
-| Flat GBM             | 0.7820               | —           |
-| Curved GBM (α = 0.9) | 0.8700               | +11.26%     |
-| Optimized Curved     | **0.8831**           | **+12.92%** |
+| Flat GBM             | 0.8284               | —           |
+| Curved GBM (α = 0.9) | 0.9250               | +11.67%     |
+| Optimized Curved     | **0.9295**           | **+12.20%** |
 
 
 ---
@@ -44,13 +44,10 @@ Flat model vs actual SPY
 Curved model vs actual SPY:
 - ![Curved Model vs Actaul](curved_model_vs_actual.png)
 
-Best-performing curved model (on this particular simulation it was alpha = 1.0):
-- ![Optimized Curved Model vs Actaul](optimized_curved_model.png)
-
 ---
 
 ## Theoretical Background
-Words
+
 
 ---
 
